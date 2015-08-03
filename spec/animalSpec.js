@@ -12,13 +12,14 @@ describe('Animal', function(){
     it('should oink if it is a pig', function(){
       expect(animal.oink()).toEqual('Oink');
     });
-    it('should not oink if xit is not pig', function(){
-
+    it('should not oink if it is not pig', function(){
+      animal.kind = "Lion";
+      expect(animal.oink()).toEqual("Not a pig");
     });
   });
 
   describe('#growUp', function(){
-    xit('should increment the age by one', function(){
+    it('should increment the age by one', function(){
 
     });
   });
