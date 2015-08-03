@@ -6,9 +6,6 @@ describe('Animal', function(){
   beforeEach(function(){
     // create a new animal object each time
     animal = new Animal("Fido", 27, "PiG");
-    {
-      
-    }
   });
 
   describe('#oink', function(){
@@ -29,14 +26,15 @@ describe('Animal', function(){
   });
 
   describe('#awake', function(){
-    xit('should initially be off', function(){
-
+    it('should initially be off', function(){
+      expect(animal.awake).toEqual(false);
     });
   });
 
    describe('#wakeUp', function(){
-    xit('should change state to awake', function(){
-
+    it('should change state to awake', function(){
+      animal.wakeUp();
+      expect(animal.awake).toEqual(true);
     });
   });
 

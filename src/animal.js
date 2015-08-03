@@ -16,4 +16,9 @@ Animal.prototype.oink = function(){
 Animal.prototype.growUp = function () {
   this.age ++;
 };
+
+Animal.prototype.wakeUp = function() {
+  this.awake = true;
+};
+
 module.exports=Animal;
