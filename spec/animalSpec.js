@@ -6,6 +6,9 @@ describe('Animal', function(){
   beforeEach(function(){
     // create a new animal object each time
     animal = new Animal("Fido", 27, "PiG");
+    {
+      
+    }
   });
 
   describe('#oink', function(){
@@ -20,7 +23,8 @@ describe('Animal', function(){
 
   describe('#growUp', function(){
     it('should increment the age by one', function(){
-
+      animal.growUp();
+      expect(animal.age).toEqual(28);
     });
   });
 

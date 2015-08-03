@@ -13,4 +13,7 @@ Animal.prototype.oink = function(){
   }
 };
 
+Animal.prototype.growUp = function () {
+  this.age ++;
+};
 module.exports=Animal;
