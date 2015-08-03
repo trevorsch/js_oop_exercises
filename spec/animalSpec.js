@@ -39,17 +39,20 @@ describe('Animal', function(){
   });
 
   describe('#sleep', function(){
-    xit('should initially be sleeping', function(){
-
+    it('should put the animal to sleep', function(){
+      animal.awake = true;
+      animal.sleep();
+      expect(animal.awake).toEqual(false);
     });
   });
 
   describe('#feed', function(){
-    xit('should get fed if awake', function(){
-
+    it('should get fed if awake', function(){
+      animal.awake = true;
+      expect(animal.feed()).toEqual("NOM NOM NOM");
     });
-    xit('not should get fed if sleeping', function(){
-
+    it('not should get fed if sleeping', function(){
+      expect(animal.feed()).toEqual("animal is asleep");
     });
   });
 });
